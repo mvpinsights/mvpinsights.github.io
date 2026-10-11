@@ -43,7 +43,7 @@
     @media (max-width: 760px) { .shots { grid-template-columns: 1fr; } }
     h2 { margin: 0 0 16px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
     section { margin-bottom: 48px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
     .card { background: var(--panel); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 18px; }
     .card h3 { margin: 0 0 6px; font-size: 17px; }
     .card p { margin: 0; color: var(--dim); font-size: 15px; }
@@ -61,16 +61,16 @@
       <img class="logo" src="icon.png" alt="" />
       <h1>MVPInsights</h1>
       <p class="tagline">Adaptive, explainable item options for League of Legends – based on the enemy team you are actually playing against.</p>
-      <span class="badge">Overwolf app · in development</span>
+      <span class="badge">Overwolf app · in development · English &amp; German</span>
     </header>
 
     <div class="shots">
       <figure>
-        <img class="shot" src="overlay.png" width="1040" height="1280" alt="In-game overlay: enemy damage split and item options with reasons and what you can buy right now" />
+        <img class="shot" src="overlay.png" width="1040" height="1096" alt="In-game overlay: enemy damage split and item options with reasons and what you can buy right now" />
         <figcaption>In-game overlay (toggle with a hotkey)</figcaption>
       </figure>
       <figure>
-        <img class="shot" src="desktop.png" width="2000" height="1840" alt="Desktop window: per-enemy damage analysis, boot option and item options" />
+        <img class="shot" src="desktop.png" width="2160" height="1880" alt="Desktop window: per-enemy damage analysis, boot option and item options" />
         <figcaption>Desktop window with per-enemy analysis</figcaption>
       </figure>
     </div>
@@ -88,9 +88,18 @@
         </div>
         <div class="card">
           <h3>3 · Choose your item</h3>
-          <p>You get several suitable options – defensive, offensive and counter – each with a short reason. You always make the decision.</p>
+          <p>You get several suitable options – defensive, offensive and counter – each with a short reason and what you can afford right now. You always make the decision.</p>
+        </div>
+        <div class="card">
+          <h3>4 · Learn after the match</h3>
+          <p>A post-game review shows how the enemy damage developed and which of your purchases were among the suggested options.</p>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2>Post-game review</h2>
+      <img class="shot" src="history.png" width="2160" height="1520" alt="Post-game review: enemy damage over time and items bought, marked as suggested option or own choice" />
     </section>
 
     <section>
