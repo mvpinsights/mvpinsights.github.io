@@ -33,10 +33,14 @@
       display: inline-block; margin-top: 20px; padding: 4px 12px; border-radius: 999px;
       border: 1px solid rgba(10, 200, 185, 0.5); color: var(--cyan); font-size: 14px;
     }
+    .shots { display: grid; grid-template-columns: 2fr 3fr; gap: 20px; align-items: start; margin: 8px 0 48px; }
+    figure { margin: 0; }
+    figcaption { margin-top: 8px; text-align: center; color: var(--dim); font-size: 14px; }
     .shot {
-      display: block; width: 100%; height: auto; margin: 8px 0 48px;
+      display: block; width: 100%; height: auto;
       border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
+    @media (max-width: 760px) { .shots { grid-template-columns: 1fr; } }
     h2 { margin: 0 0 16px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
     section { margin-bottom: 48px; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
@@ -60,7 +64,16 @@
       <span class="badge">Overwolf app · in development</span>
     </header>
 
-    <img class="shot" src="screenshot.jpg" alt="MVPInsights desktop window: enemy damage split, per-enemy analysis and item options with reasons" />
+    <div class="shots">
+      <figure>
+        <img class="shot" src="overlay.png" width="1040" height="1280" alt="In-game overlay: enemy damage split and item options with reasons and what you can buy right now" />
+        <figcaption>In-game overlay (toggle with a hotkey)</figcaption>
+      </figure>
+      <figure>
+        <img class="shot" src="desktop.png" width="2000" height="1840" alt="Desktop window: per-enemy damage analysis, boot option and item options" />
+        <figcaption>Desktop window with per-enemy analysis</figcaption>
+      </figure>
+    </div>
 
     <section>
       <h2>How it works</h2>
