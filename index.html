@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MVPInsights – Adaptive item options for League of Legends</title>
+  <meta name="description" content="MVPInsights is a free Overwolf app that analyzes the enemy team and shows explainable item options for League of Legends." />
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root {
+      --bg: #0a0e16;
+      --panel: #111827;
+      --text: #e8e6e1;
+      --dim: #9aa3b2;
+      --gold: #c8aa6e;
+      --gold-bright: #f0d48a;
+      --cyan: #0ac8b9;
+      --border: rgba(200, 170, 110, 0.25);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 64px 0 40px; text-align: center; }
+    .logo { width: 88px; height: 88px; }
+    h1 { margin: 16px 0 8px; font-size: 44px; letter-spacing: 0.06em; color: var(--gold-bright); }
+    .tagline { margin: 0 auto; max-width: 620px; color: var(--dim); font-size: 19px; }
+    .badge {
+      display: inline-block; margin-top: 20px; padding: 4px 12px; border-radius: 999px;
+      border: 1px solid rgba(10, 200, 185, 0.5); color: var(--cyan); font-size: 14px;
+    }
+    .shot {
+      display: block; width: 100%; height: auto; margin: 8px 0 48px;
+      border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    h2 { margin: 0 0 16px; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+    section { margin-bottom: 48px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { background: var(--panel); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 18px; }
+    .card h3 { margin: 0 0 6px; font-size: 17px; }
+    .card p { margin: 0; color: var(--dim); font-size: 15px; }
+    ul.check { margin: 0; padding: 0; list-style: none; }
+    ul.check li { padding-left: 26px; position: relative; margin-bottom: 8px; color: var(--dim); }
+    ul.check li::before { content: '✓'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; }
+    ul.cross li::before { content: '✕'; color: #ff6b6b; }
+    footer { padding: 24px 0 40px; border-top: 1px solid rgba(255, 255, 255, 0.06); color: var(--dim); font-size: 13px; }
+    @media (max-width: 600px) { h1 { font-size: 34px; } header { padding-top: 40px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="icon.png" alt="" />
+      <h1>MVPInsights</h1>
+      <p class="tagline">Adaptive, explainable item options for League of Legends – based on the enemy team you are actually playing against.</p>
+      <span class="badge">Overwolf app · in development</span>
+    </header>
+
+    <img class="shot" src="screenshot.jpg" alt="MVPInsights desktop window: enemy damage split, per-enemy analysis and item options with reasons" />
+
+    <section>
+      <h2>How it works</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1 · Read the scoreboard</h3>
+          <p>During a match, MVPInsights reads the same information you see on the in-game scoreboard: champions, items, levels and scores – plus the damage you take.</p>
+        </div>
+        <div class="card">
+          <h3>2 · Understand the threat</h3>
+          <p>It builds a profile of the enemy team: physical / magic / true damage split, healing, crowd control, crit, shields, armor and magic resist.</p>
+        </div>
+        <div class="card">
+          <h3>3 · Choose your item</h3>
+          <p>You get several suitable options – defensive, offensive and counter – each with a short reason. You always make the decision.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Fair play</h2>
+      <div class="grid">
+        <div class="card">
+          <ul class="check">
+            <li>Only official data sources (Live Client Data, Data Dragon)</li>
+            <li>Only information visible in the game client</li>
+            <li>Free for all players</li>
+            <li>No ads in-game or in the Riot Client</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul class="check cross">
+            <li>No hidden information (cooldowns, timers, fog of war)</li>
+            <li>No automation – it never buys items for you</li>
+            <li>No memory reading or client modification</li>
+            <li>No MMR / ELO calculation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p style="color: var(--dim); margin: 0">
+        MVPInsights runs locally on your PC. Match data is analyzed on your device and is not uploaded or stored on our servers.
+        The app only downloads public game data (items, champions, icons) from Riot's Data Dragon.
+      </p>
+    </section>
+
+    <footer>
+      MVPInsights isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in
+      producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of
+      Riot Games, Inc.
+    </footer>
+  </div>
+</body>
+</html>
